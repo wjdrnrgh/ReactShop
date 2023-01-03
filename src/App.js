@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { data } from "./store/data";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Home from "./routes/Home";
+import Detail from "./routes/Detail";
+import Cart from "./routes/Cart";
+import Favorite from "./routes/Favorite";
+import store from "./store/store";
 
 function App() {
+  const [product, setProduct] = useState(data);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home product={product} />}></Route>
+          <Route
+            path="/detail/:id"
+            element={<Detail product={product} />}
+          ></Route>
+          <Route path="/favorite" element={<Favorite />}></Route>
+          <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/admin" element={<div>ADMIN</div>}></Route>
+          <Route path="*" element={<div>Not Found</div>}></Route>
+        </Routes>
+        <Footer />
+      </Router>
+    </Provider>
   );
 }
 

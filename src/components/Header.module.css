@@ -1,0 +1,51 @@
+header {
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff; */
+  box-shadow: rgb(0 0 0 / 7%) 0px 3px 4px 0px;
+}
+.nav {
+  max-width: 1050px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.logo {
+  text-decoration: none;
+  color: #000000;
+}
+.logo > i {
+  color: #5ed3f3;
+}
+.navList {
+  display: flex;
+}
+.navItem {
+  width: 50px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.navItem > span {
+  cursor: pointer;
+}
+.productCnt {
+  position: absolute;
+  top: 10px;
+  right: 2px;
+  width: 17.5px;
+  height: 17.5px;
+  line-height: 17.5px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: #5ed3f3;
+  color: #ffffff;
+}

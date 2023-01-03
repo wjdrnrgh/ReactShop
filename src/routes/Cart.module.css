@@ -1,0 +1,66 @@
+.cartList {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 2px solid rgb(244, 244, 244);
+  font-size: 1.1rem;
+}
+.cartList > img {
+  width: 150px;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.counter {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(221, 223, 225);
+  border-radius: 2.5px;
+}
+.counter > button {
+  all: unset;
+  cursor: pointer;
+  color: rgb(221, 223, 225);
+  transition: all 0.1s linear;
+}
+.counter > button:hover {
+  color: #5ed3f3;
+}
+.counter > div {
+  line-height: 30px;
+}
+.counter > div,
+.counter > button {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+.totalPrice {
+  width: 120px;
+  text-align: center;
+}
+.deleteBtn {
+  all: unset;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.deleteBtn:hover span {
+  background-color: #5ed3f3;
+}
+.lineFirst,
+.lineSecond {
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 2px;
+  background-color: rgb(221, 223, 225);
+  left: 7.5px;
+  transition: all 0.1s linear;
+}
+.lineFirst {
+  transform: rotate(-45deg);
+}
+.lineSecond {
+  transform: rotate(45deg);
+}

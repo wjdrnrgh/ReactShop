@@ -1,0 +1,58 @@
+.favoriteList {
+  position: relative;
+  display: flex;
+  padding: 2rem 0;
+  border-bottom: 2px solid rgb(244, 244, 244);
+}
+.favoriteList > img {
+  width: 300px;
+  max-height: 200px;
+  cursor: pointer;
+}
+.favoriteInfo {
+  flex: 1;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.infoBox > h1 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.infoBox > h2 {
+  font-size: 1.2rem;
+}
+.orderBox {
+  display: flex;
+  justify-content: end;
+}
+.orderBox > button {
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 900;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+.deleteBtn {
+  border: 1px solid rgb(221, 221, 221);
+  background-color: transparent;
+  color: rgb(221, 221, 221);
+  transition: all 0.15s linear;
+}
+.deleteBtn:hover {
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
+  color: #ffffff;
+}
+.orderBtn {
+  border: 1px solid #5ed3f3;
+  background-color: transparent;
+  color: #5ed3f3;
+  transition: all 0.15s linear;
+}
+.orderBtn:hover {
+  background-color: #5ed3f3;
+  color: #ffffff;
+}

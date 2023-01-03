@@ -1,0 +1,12 @@
+.container {
+  position: relative;
+  max-width: 1050px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 1rem 0 5rem 0;
+}
+.pageTitle {
+  padding: 2rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+}

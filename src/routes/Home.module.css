@@ -1,0 +1,16 @@
+.mainBg {
+  height: 500px;
+  background-color: #43b9f0;
+  /* background-image: url("/public/img/mainBg.jpg");
+  background-position: center bottom;
+  background-size: cover; */
+}
+.productTitle {
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 2rem;
+}
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+}

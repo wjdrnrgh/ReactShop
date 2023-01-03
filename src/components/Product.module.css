@@ -1,0 +1,22 @@
+.productItem {
+  width: 33.33333%;
+  padding: 0px 1rem;
+  margin-bottom: 1rem;
+}
+.productLink {
+  display: block;
+}
+.productCover {
+  width: 100%;
+  transition: transform 0.1s linear;
+}
+.productCover:hover {
+  transform: scale(1.05);
+}
+.productInfo {
+  padding: 10px 10px 0 0;
+}
+.productInfo > h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
