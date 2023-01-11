@@ -7,7 +7,6 @@ export const data = [
     price: "120,000",
     color: "black",
   },
-
   {
     id: 1,
     cover: "/img/shoes",
@@ -16,7 +15,6 @@ export const data = [
     price: "110,000",
     color: "pink",
   },
-
   {
     id: 2,
     cover: "/img/shoes",

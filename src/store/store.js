@@ -1,5 +1,6 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
-import userFavorite from "./userFavorite";
+import userRecent from "./userRecent";
+import cartCounting from "./cartCounting";
 
 const localKey = createSlice({
   name: "localKey",
@@ -12,6 +13,7 @@ const localKey = createSlice({
 export default configureStore({
   reducer: {
     localKey: localKey.reducer,
-    userFavorite: userFavorite.reducer,
+    userRecent: userRecent.reducer,
+    cartCounting: cartCounting.reducer,
   },
 });

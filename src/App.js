@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Provider } from "react-redux";
+import { Provider, useDispatch } from "react-redux";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { data } from "./store/data";
 import Footer from "./components/Footer";
@@ -17,7 +17,10 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Home product={product} />}></Route>
+          <Route
+            path="/"
+            element={<Home product={product} newItem={product[0]} />}
+          ></Route>
           <Route
             path="/detail/:id"
             element={<Detail product={product} />}

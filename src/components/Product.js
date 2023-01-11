@@ -24,10 +24,18 @@ const Product = ({ product }) => {
               </div>
               <div className={styles.productInfo}>
                 <h3>{item.title}</h3>
-                <div>
-                  <span>{item.content}</span>
+                <div
+                  style={{
+                    marginTop: "5px",
+                  }}
+                >
+                  <span className={styles.productContent}>{item.content}</span>
                 </div>
-                <div>
+                <div
+                  style={{
+                    marginTop: "5px",
+                  }}
+                >
                   <span>{item.price} 원</span>
                 </div>
               </div>

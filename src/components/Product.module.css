@@ -1,10 +1,17 @@
 .productItem {
-  width: 33.33333%;
-  padding: 0px 1rem;
-  margin-bottom: 1rem;
+  width: 32%;
+  margin-bottom: 2.5rem;
 }
 .productLink {
   display: block;
+  padding: 1rem;
+  /* margin: 0 1rem; */
+  border: 1.5px solid transparent;
+  border-radius: 2.5px;
+  transition: border 0.1s linear;
+}
+.productLink:hover {
+  border: 1.5px solid rgb(221, 223, 225);
 }
 .productCover {
   width: 100%;
@@ -18,5 +25,7 @@
 }
 .productInfo > h3 {
   font-size: 1.1rem;
-  margin-bottom: 10px;
+}
+.productContent {
+  color: rgb(181, 181, 181);
 }

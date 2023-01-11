@@ -42,8 +42,14 @@ const Favorite = () => {
                 />
                 <div className={styles.favoriteInfo}>
                   <div className={styles.infoBox}>
-                    <h1>{item.title}</h1>
-                    <h2>{item.content}</h2>
+                    <h1
+                      onClick={() => {
+                        navigate(`/detail/${item.id}`);
+                      }}
+                    >
+                      {item.title}
+                    </h1>
+                    <h2 className={styles.productContent}>{item.content}</h2>
                     <h2>{item.price} 원</h2>
                   </div>
                   <div className={styles.orderBox}>

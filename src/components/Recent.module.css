@@ -1,0 +1,56 @@
+.recentBar {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 100px;
+  height: 100%;
+}
+.recentBox {
+  margin-top: 5rem;
+  position: sticky;
+  top: 150px;
+  padding: 2rem 5px;
+  border: 1px solid rgb(221, 223, 225);
+  border-radius: 2.5px;
+}
+.recentTitle {
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+.recentNav {
+  position: absolute;
+  bottom: 5px;
+  left: 47%;
+}
+.recentWrap {
+  height: 300px;
+  overflow-y: overlay;
+  scroll-behavior: smooth;
+}
+.recentWrap::-webkit-scrollbar {
+  width: 1px;
+  background-color: transparent;
+}
+.recentList {
+  display: flex;
+  flex-direction: column;
+}
+.recentItem {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid rgb(221, 223, 225);
+}
+.recentItem > a {
+  display: inline-block;
+}
+.recentItem > a > img {
+  width: 100%;
+}
+
+@media (max-width: 1500px) {
+  .recentBar {
+    display: none;
+  }
+}

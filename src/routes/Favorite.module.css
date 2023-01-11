@@ -16,9 +16,17 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.infoBox {
+  flex: 1;
+}
+.productContent {
+  color: rgb(181, 181, 181);
+  margin-bottom: 5px;
+}
 .infoBox > h1 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 .infoBox > h2 {
   font-size: 1.2rem;

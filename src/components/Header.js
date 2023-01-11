@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect, useMemo, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { cartCounter } from "../store/cartCounting";
 import styles from "./Header.module.css";
 
 const Header = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { favorite, cart } = useSelector((state) => {
     return state.localKey;
   });
+
   let localFavorite = localStorage.getItem(favorite);
   if (!localFavorite) {
     localStorage.setItem(favorite, JSON.stringify([]));
@@ -18,7 +21,6 @@ const Header = () => {
     localStorage.setItem(cart, JSON.stringify([]));
     localCart = localStorage.getItem(cart);
   }
-
   const [favoriteItem, setFavorite] = useState(JSON.parse(localFavorite));
   const [cartItem, setCart] = useState(JSON.parse(localCart));
 

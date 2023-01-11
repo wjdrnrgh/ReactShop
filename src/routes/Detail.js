@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { itemAdd } from "../store/userRecent";
 import "./share.css";
 import styles from "./Detail.module.css";
 
 const Detail = ({ product }) => {
+  const dispatch = useDispatch();
   const { favorite, cart } = useSelector((state) => {
     return state.localKey;
   });
@@ -18,7 +20,6 @@ const Detail = ({ product }) => {
     localStorage.setItem(cart, JSON.stringify([]));
     localCart = localStorage.getItem(cart);
   }
-
   const [favoriteItem, setFavorite] = useState(JSON.parse(localFavorite));
   const [cartItem, setCart] = useState(JSON.parse(localCart));
 
@@ -27,6 +28,11 @@ const Detail = ({ product }) => {
     return item.id === parseInt(id);
   });
   const [target] = copy;
+
+  useEffect(() => {
+    dispatch(itemAdd(target));
+  }, []);
+
   return (
     <div className="container">
       <div className={styles.productDetail}>

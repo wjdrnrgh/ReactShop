@@ -1,12 +1,40 @@
 .container {
   position: relative;
-  max-width: 1050px;
+  max-width: 1200px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 1rem 0 5rem 0;
+  padding: 1rem 0.5rem 5rem 0.5rem;
 }
 .pageTitle {
   padding: 2rem 0;
   font-size: 1.5rem;
   text-align: center;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  position: absolute;
+  font-size: 1.25rem;
+  color: #fff;
+}
+.swiper-button-prev::after {
+  left: 16px;
+}
+.swiper-button-next::after {
+  right: 16px;
+}
+.swiper-pagination {
+  width: 60px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #fff;
+  left: unset;
+  right: 10px !important;
 }
