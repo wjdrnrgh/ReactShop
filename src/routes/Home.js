@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import Product from "../components/Product";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper";
+import axios from "axios";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -11,9 +12,16 @@ import "./share.css";
 import styles from "./Home.module.css";
 import Recent from "../components/Recent";
 
-const Home = ({ product, newItem }) => {
+const Home = ({
+  product,
+  setProduct,
+  counter,
+  setCounter,
+  newItem,
+  apiUrl,
+}) => {
   const navigate = useNavigate();
-  console.log(newItem);
+
   return (
     <div>
       <Swiper
@@ -33,7 +41,7 @@ const Home = ({ product, newItem }) => {
         <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>s
+        <SwiperSlide>Slide 5</SwiperSlide>
       </Swiper>
       <div style={{ position: "relative" }}>
         <div className="container">
@@ -82,6 +90,25 @@ const Home = ({ product, newItem }) => {
             <div className={styles.productList}>
               <Product product={product} />
             </div>
+            {counter >= 3 ? null : (
+              <div className={styles.controller}>
+                <button
+                  className={styles.controllerBtn}
+                  onClick={async () => {
+                    const json = await axios
+                      .get(`${apiUrl}${counter + 1}.json`)
+                      .then((res) => {
+                        return res.data;
+                      });
+                    let copy = [...product, ...json];
+                    setProduct(copy);
+                    setCounter((current) => current + 1);
+                  }}
+                >
+                  더보기
+                </button>
+              </div>
+            )}
           </div>
         </div>
         <Recent />

@@ -68,3 +68,22 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.controller {
+  text-align: center;
+  margin-top: 2rem;
+}
+.controllerBtn {
+  all: unset;
+  width: 100px;
+  height: 40px;
+  border: 1.5px solid #5ed3f3;
+  color: #5ed3f3;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.controllerBtn:hover {
+  background-color: #5ed3f3;
+  color: #ffffff;
+}

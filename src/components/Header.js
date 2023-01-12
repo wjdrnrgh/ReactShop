@@ -61,7 +61,7 @@ const Header = () => {
               ) : null}
             </span>
           </li>
-          <li className={styles.navItem}>
+          {/* <li className={styles.navItem}>
             <span
               style={{
                 cursor: "pointer",
@@ -72,7 +72,7 @@ const Header = () => {
             >
               <i className="fa-solid fa-circle-user"></i>
             </span>
-          </li>
+          </li> */}
         </ul>
       </div>
     </header>
