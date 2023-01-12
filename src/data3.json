@@ -1,0 +1,26 @@
+[
+  {
+    "id": 6,
+    "cover": "/img/shoes",
+    "title": "Sijang",
+    "content": "from Dongmyo station",
+    "price": "125,000",
+    "color": "skyblue"
+  },
+  {
+    "id": 7,
+    "cover": "/img/shoes",
+    "title": "Tag gari",
+    "content": "ali and taobao",
+    "price": "142,000",
+    "color": "black"
+  },
+  {
+    "id": 8,
+    "cover": "/img/shoes",
+    "title": "Flyer",
+    "content": "Refund not available",
+    "price": "99,000",
+    "color": "blue"
+  }
+]

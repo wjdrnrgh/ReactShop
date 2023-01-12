@@ -1,0 +1,26 @@
+[
+  {
+    "id": 3,
+    "cover": "/img/shoes",
+    "title": "Flowey",
+    "content": "only 5 inches",
+    "price": "140,000",
+    "color": "blue"
+  },
+  {
+    "id": 4,
+    "cover": "/img/shoes",
+    "title": "Baby shoes",
+    "content": "for less than 6",
+    "price": "90,000",
+    "color": "pink"
+  },
+  {
+    "id": 5,
+    "cover": "/img/shoes",
+    "title": "Red Herring",
+    "content": "Born in France",
+    "price": "95,000",
+    "color": "red"
+  }
+]
