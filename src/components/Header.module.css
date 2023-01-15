@@ -1,9 +1,10 @@
 header {
-  /* position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #ffffff; */
+  background-color: #ffffff;
+  z-index: 99;
   box-shadow: rgb(0 0 0 / 7%) 0px 3px 4px 0px;
 }
 .nav {

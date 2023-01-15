@@ -68,3 +68,35 @@
   color: #ffffff;
   font-size: 1rem;
 }
+.tabMenu {
+  margin-top: 5rem;
+}
+nav > ul {
+  display: flex;
+}
+nav > ul > li {
+  cursor: pointer;
+  width: 24.99999%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #fafafa;
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #eee;
+}
+nav > ul > li:last-of-type {
+  border-right-width: 1px;
+}
+.tabActive {
+  color: #5ed3f3;
+  border-bottom: 1px solid transparent;
+}
+.tabContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  min-height: 400px;
+  font-size: 1.5rem;
+}

@@ -22,6 +22,7 @@ const Detail = ({ product }) => {
   }
   const [favoriteItem, setFavorite] = useState(JSON.parse(localFavorite));
   const [cartItem, setCart] = useState(JSON.parse(localCart));
+  const [tabStatus, setTabStatus] = useState(0);
 
   const { id } = useParams();
   let copy = [...product].filter((item) => {
@@ -134,6 +135,64 @@ const Detail = ({ product }) => {
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles.tabMenu}>
+        <nav>
+          <ul>
+            <li
+              onClick={() => {
+                setTabStatus(1);
+              }}
+              className={tabStatus === 1 ? `${styles.tabActive}` : null}
+            >
+              상품설명
+            </li>
+            <li
+              onClick={() => {
+                setTabStatus(2);
+              }}
+              className={tabStatus === 2 ? `${styles.tabActive}` : null}
+            >
+              상세정보
+            </li>
+            <li
+              onClick={() => {
+                setTabStatus(3);
+              }}
+              className={tabStatus === 3 ? `${styles.tabActive}` : null}
+            >
+              후기
+            </li>
+            <li
+              onClick={() => {
+                setTabStatus(4);
+              }}
+              className={tabStatus === 4 ? `${styles.tabActive}` : null}
+            >
+              문의
+            </li>
+          </ul>
+        </nav>
+        {tabStatus === 1 ? (
+          <div className={styles.tabContent}>
+            상품설명 기능은 현재 준비중입니다.
+          </div>
+        ) : null}
+        {tabStatus === 2 ? (
+          <div className={styles.tabContent}>
+            상세정보 기능은 현재 준비중입니다.
+          </div>
+        ) : null}
+        {tabStatus === 3 ? (
+          <div className={styles.tabContent}>
+            후기 기능은 현재 준비중입니다.
+          </div>
+        ) : null}
+        {tabStatus === 4 ? (
+          <div className={styles.tabContent}>
+            문의 기능은 현재 준비중입니다.
+          </div>
+        ) : null}
       </div>
     </div>
   );

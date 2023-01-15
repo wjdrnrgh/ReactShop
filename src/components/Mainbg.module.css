@@ -1,0 +1,31 @@
+.textBox {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: brightness(0.65);
+}
+.textWrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: brightness;
+}
+.textWrap > p {
+  color: #fff;
+}
+.mainTxt {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+.mainSubTxt {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.subTxt {
+  font-size: 1.5rem;
+  font-weight: 400;
+}

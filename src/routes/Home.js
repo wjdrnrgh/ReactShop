@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Product from "../components/Product";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,6 +11,7 @@ import "swiper/css/scrollbar";
 import "./share.css";
 import styles from "./Home.module.css";
 import Recent from "../components/Recent";
+import Mainbg from "../components/Mainbg";
 
 const Home = ({
   product,
@@ -21,12 +22,11 @@ const Home = ({
   apiUrl,
 }) => {
   const navigate = useNavigate();
-
   return (
-    <div>
+    <div style={{ marginTop: "60px" }}>
       <Swiper
         modules={[Autoplay, Navigation, Pagination]}
-        spaceBetween={50}
+        spaceBetween={0}
         slidesPerView={1}
         navigation
         pagination={{ type: "fraction" }}
@@ -37,14 +37,48 @@ const Home = ({
         loop
         className={styles.mainBg}
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide
+          style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL}/img/mainbg1.jpg)`,
+            backgroundSize: "cover",
+            backgroundPosition: "bottom",
+          }}
+        >
+          <Mainbg
+            mainSubTxt="Nunc porttitor ultricies leo"
+            mainTxt="Lorem ipsum dolor sit amet"
+            subTxt="Consectetur adipiscing elit"
+          />
+        </SwiperSlide>
+        <SwiperSlide
+          style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL}/img/mainbg2.jpg)`,
+            backgroundSize: "cover",
+            backgroundPosition: "bottom",
+          }}
+        >
+          <Mainbg
+            mainSubTxt="Placerat vel sem"
+            mainTxt="Curabitur in interdum elit"
+            subTxt="Aliquam lacinia ornare turpis"
+          />
+        </SwiperSlide>
+        <SwiperSlide
+          style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL}/img/mainbg3.jpg)`,
+            backgroundSize: "cover",
+            backgroundPosition: "bottom",
+          }}
+        >
+          <Mainbg
+            mainSubTxt="Maecenas dignissim"
+            mainTxt="Enim turpis ullamcorper nulla"
+            subTxt="Sem non aliquam bibendum"
+          />
+        </SwiperSlide>
       </Swiper>
       <div style={{ position: "relative" }}>
-        <div className="container">
+        <div className="container" style={{ margin: "0px auto" }}>
           <div className={styles.newItem}>
             <div className={styles.newItemInfo}>
               <h1 className={styles.newItemTitle}>신규상품</h1>

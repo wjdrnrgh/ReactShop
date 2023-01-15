@@ -1,6 +1,5 @@
 .mainBg {
-  height: 500px;
-  background-color: #c4c4c4;
+  height: 550px;
 }
 .newItem {
   width: 100%;
@@ -66,7 +65,6 @@
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .controller {
