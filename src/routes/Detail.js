@@ -103,7 +103,7 @@ const Detail = ({ product }) => {
               </button>
               <div
                 style={{
-                  width: "10px",
+                  width: "20px",
                 }}
               ></div>
               <button

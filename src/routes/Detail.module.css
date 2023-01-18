@@ -49,7 +49,7 @@
   cursor: pointer;
 }
 .favoriteBtn {
-  width: 50px;
+  width: 70px;
   height: 50px;
   border: 1px solid rgb(221, 221, 221);
   background-color: transparent;
@@ -91,6 +91,7 @@ nav > ul > li:last-of-type {
 .tabActive {
   color: #5ed3f3;
   border-bottom: 1px solid transparent;
+  background-color: #ffffff;
 }
 .tabContent {
   display: flex;
@@ -99,4 +100,7 @@ nav > ul > li:last-of-type {
   padding: 2rem 0;
   min-height: 400px;
   font-size: 1.5rem;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: #eee;
 }

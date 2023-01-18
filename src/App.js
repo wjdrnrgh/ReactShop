@@ -31,10 +31,11 @@ function App() {
 
   return (
     <Provider store={store}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Header />
         <Routes>
           <Route
+            basename={process.env.PUBLIC_URL}
             path="/"
             element={
               <Home
@@ -47,10 +48,23 @@ function App() {
               />
             }
           ></Route>
-          <Route path="/detail/:id" element={<Detail product={data} />}></Route>
-          <Route path="/favorite" element={<Favorite />}></Route>
-          <Route path="/cart" element={<Cart />}></Route>
           <Route
+            basename={process.env.PUBLIC_URL}
+            path="/detail/:id"
+            element={<Detail product={data} />}
+          ></Route>
+          <Route
+            basename={process.env.PUBLIC_URL}
+            path="/favorite"
+            element={<Favorite />}
+          ></Route>
+          <Route
+            basename={process.env.PUBLIC_URL}
+            path="/cart"
+            element={<Cart />}
+          ></Route>
+          <Route
+            basename={process.env.PUBLIC_URL}
             path="*"
             element={
               <div
